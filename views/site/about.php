@@ -4,6 +4,7 @@
 
 use yii\helpers\Html;
 use yii\helpers\HtmlPurifier;
+use kartik\datetime\DateTimePicker;
 
 $this->title = 'About';
 $this->params['breadcrumbs'][] = $this->title;
@@ -22,5 +23,16 @@ $this->registerMetaTag(['name' => 'description', 'content' => 'This is the descr
        <b>Email: </b> <?= $email ?> <br>
        <b>Phone:</b> <?= $phone ?>
    </p>
+    <?php
+    echo DateTimePicker::widget([
+            'name' => 'dp_1',
+            'type' => DateTimePicker::TYPE_INPUT,
+            'value' => '2-march-2020 12:06',
+            'pluginOptions' => [
+                            'autoclose'=>true,
+                        'format' => 'dd-M-yyyy hh:ii'
+                    ]
+        ]);
+    ?>
     <code><?= __FILE__ ?></code>
 </div>

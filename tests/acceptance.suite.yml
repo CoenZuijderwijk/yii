@@ -3,8 +3,11 @@ modules:
     enabled:
         - WebDriver:
             url: http://127.0.0.1:8080/
-            browser: firefox
+            browser: google chrome
         - Yii2:
             part: orm
             entryScript: index-test.php
             cleanup: false
+        - PhpBrowser:
+            url: htt[://127.0.0.1:8080/
+        - \Helper\AcceptanceTester
